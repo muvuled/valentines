@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Be my Valentine? 💘 · red & white romance</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="floating-hearts"></div>
+  <canvas id="fxCanvas"></canvas>
+
+  <button class="music-btn" id="musicBtn" title="Tap for extra love">❤️</button>
+
+  <main class="wrap">
+    <!-- HOME / QUESTION CARD -->
+    <section class="card" id="home">
+      <div class="badge">💞 close your eyes & feel the love</div>
+
+      <h1 class="title">
+        Christina Siala, will you be my <span class="accent">Valentine</span>?
+      </h1>
+
+      <p class="subtitle">
+        I’d choose you in every lifetime — today I just want to ask properly. 🌹
+      </p>
+
+      <div class="hero-photos">
+        <div class="polaroid tilt-left">
+          <img src="asserts/photo5.jpeg" alt="Our moment 1" />
+          <span>my favorite person</span>
+        </div>
+        <div class="polaroid tilt-right">
+          <img src="asserts/photo10.jpeg" alt="Our moment 2" />
+          <span>my safe place</span>
+        </div>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn yes" id="yesBtn">Yes 💖</button>
+        <button class="btn no" id="noBtn">No 🙈</button>
+      </div>
+
+      <p class="tiny-note" id="noHint">(the "No" button is shy, try to catch it 😅)</p>
+    </section>
+
+    <!-- CELEBRATION -->
+    <section class="card celebration" id="celebration" hidden>
+      <h2 class="title2">Yaaay, Christina! 💘</h2>
+      <p class="subtitle">my heart is doing backflips babe</p>
+
+      <div class="message-box">
+        <div class="message" id="messageText">you make everything beautiful ✨</div>
+        <div class="message-actions">
+          <button class="chip" id="nextMsgBtn">another cute message ✨</button>
+          <button class="chip" id="replayFxBtn">replay flowers 🌸</button>
+        </div>
+      </div>
+
+      <div class="flower-row" id="flowerRow">
+        <div class="flower f1"></div>
+        <div class="flower f2"></div>
+        <div class="flower f3"></div>
+        <div class="flower f4"></div>
+        <div class="flower f5"></div>
+      </div>
+
+      <div class="gallery-wrap">
+        <h3 class="section-title">📸 our memories</h3>
+
+        <div class="masonry" id="gallery">
+          <figure class="tile"><img src="asserts/photo1.jpeg" alt="Memory 1"><figcaption>that spark ✨</figcaption></figure>
+          <figure class="tile"><img src="asserts/photo2.jpeg" alt="Memory 2"><figcaption>red like love ❤️</figcaption></figure>
+          <figure class="tile"><img src="asserts/photo3.jpeg" alt="Memory 3"><figcaption>soft moments</figcaption></figure>
+          <figure class="tile"><img src="asserts/photo4.jpeg" alt="Memory 4"><figcaption>my sunshine</figcaption></figure>
+          <figure class="tile wide"><img src="asserts/photo5.jpeg" alt="Memory 5"><figcaption>you + me = ∞</figcaption></figure>
+          <figure class="tile"><img src="asserts/photo8.jpeg" alt="Memory 6"><figcaption>stole my heart</figcaption></figure>
+          <figure class="tile"><img src="asserts/photo9.jpeg" alt="Memory 7"><figcaption>valentine’s glow</figcaption></figure>
+          <figure class="tile"><img src="asserts/photo10.jpeg" alt="Memory 8"><figcaption>always us</figcaption></figure>
+          <figure class="tile wide"><img src="asserts/WhatsApp Image 2026-02-13 at 18.37.21.jpeg" alt="Memory 9"><figcaption>forever type of love</figcaption></figure>
+        </div>
+
+        <div class="final-card">
+          <h3>one last thing …</h3>
+          <p>thank you for being you, Christina. every moment with you is magic 💗</p>
+          <button class="btn yes" id="backHomeBtn" style="font-size:1.2rem">back to the question 💌</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERLAY (bloom) -->
+    <div class="overlay" id="overlay" hidden>
+      <div class="overlay-inner">
+        <div class="bloom">
+          <div class="bloom-flower"></div>
+          <div class="bloom-flower delay1"></div>
+          <div class="bloom-flower delay2"></div>
+        </div>
+        <div class="overlay-title">Happy Valentine’s 💐</div>
+        <div class="overlay-sub">Christina Siala, you’re my favorite part of every day.</div>
+      </div>
+    </div>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lb-close" id="lbClose">✕</button>
+      <img id="lbImg" src="" alt="enlarged memory" />
+      <div class="lbCap" id="lbCap"></div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
